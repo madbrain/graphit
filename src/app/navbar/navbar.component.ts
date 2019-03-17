@@ -26,4 +26,8 @@ export class NavbarComponent implements OnInit {
     this.modalService.open(AboutModalComponent);
   }
 
+  signIn() {
+    console.log("TODO: sign in");
+  }
+
 }

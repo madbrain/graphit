@@ -1,6 +1,8 @@
 /* UI Bootstrap corrections */
 /* .nav, .pagination, .carousel, .panel-title a { cursor: pointer; } */
 
+@import "~bootstrap/dist/css/bootstrap.css";
+
 body {
 	padding-top: 70px;
 }
