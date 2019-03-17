@@ -1,0 +1,41 @@
+<main role="main" class="container-fluid">
+
+	<div class="doc-info">
+		<app-inline-edit [(ngModel)]="doc && doc.info && doc.info.title" (ngModelChange)="doc.change(true)" class="doc-title"></app-inline-edit>
+		<div class="doc-state">{{ state() | saveStateFormatter }}</div>
+	</div>
+
+	<div class="row">
+
+		<div class="col-md-9">
+
+			<div class="card">
+				<div class="card-header">
+					<div class="btn-toolbar" role="toolbar">
+						<div class="btn-group">
+							<button type="button" class="btn btn-primary" (click)="addNode()"
+									data-toggle="tooltip" data-placement="top" title="Create a new node">
+								<fa-icon [icon]="faPlus"></fa-icon>
+							</button>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+            		<app-graph-canvas (selection)="setSelection($event)" [document]="doc"></app-graph-canvas>
+				</div>
+			</div>
+
+		</div>
+
+		<div class="col-md-3">
+			<div class="card">
+				<h4 class="card-header">Node Information</h4>
+				<div class="card-body">
+					Label: <app-inline-edit [(ngModel)]="graphSelection && graphSelection.label" (ngModelChange)="doc.change(true)"></app-inline-edit>
+				</div>
+			</div>
+		</div>
+
+	</div>
+
+</main> <!-- /.container -->

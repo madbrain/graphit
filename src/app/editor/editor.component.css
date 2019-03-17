@@ -1,0 +1,13 @@
+
+.doc-info {
+    margin: 10px;
+}
+
+.doc-title {
+    font-size: 30px;
+}
+
+.doc-state {
+    font-size: 15px;
+    color: gray;
+}

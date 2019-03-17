@@ -1,0 +1,8 @@
+<div id="inlineEditWrapper">
+    <div *ngIf="editing">
+      <input #inlineEditControl (blur)="onBlur($event)" (keydown.enter)="onKeyDownEnter($event)" [(ngModel)]="value" type="text" />
+    </div>
+    <div *ngIf="!editing">
+      <div title="Click to edit" (click)="edit(value)" (focus)="edit(value);" tabindex="0" class="inline-edit">{{value}}&nbsp;</div>
+    </div>
+</div>

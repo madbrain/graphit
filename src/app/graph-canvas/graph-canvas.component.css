@@ -1,0 +1,53 @@
+
+.node rect {
+	stroke-width: 1px;
+	stroke: #ccc;
+	fill: url(#rect-gradient);
+	filter: url(#drop-shadow);
+}
+
+.node text {
+	text-anchor: middle;
+}
+
+.node {
+	-webkit-touch-callout: none;
+	-webkit-user-select: none;
+	-khtml-user-select: none;
+	-moz-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+#node-CLOSED rect {
+	stroke-width: 1px;
+	fill: #f88;
+}
+
+.node:hover {
+	cursor: pointer;
+	opacity: 0.6;
+}
+
+.node-selected rect {
+	fill: url(#rect-select-gradient);
+}
+.node-highlight rect {
+	fill: url(#rect-highlight-gradient);
+}
+
+path.edge {
+	fill: none;
+	stroke: #640a50;
+	stroke-width: 3px;
+	marker-end: url(#arrowhead);
+}
+
+path.edge.edge-selected {
+	stroke: #6464cc;
+}
+
+.edge:hover {
+	cursor: pointer;
+	opacity: 0.4;
+}

@@ -1,0 +1,39 @@
+<div>
+    <svg id="graphCanvas" width="100%" height="100%">
+        <defs>
+            <marker id="arrowhead" viewBox="0 0 10 10" refX="8" refY="5" markerUnits="strokeWidth" markerWidth="8"
+                markerHeight="5" orient="auto" style="fill: #640a50">
+                <path d="M 0 0 L 10 5 L 0 10 z" />
+            </marker>
+
+            <filter id="drop-shadow" width="150%" height="150%">
+                <feGaussianBlur in="SourceAlpha" result="blur-out" stdDeviation="2" />
+                <feOffset in="blur-out" result="the-shadow" dx="2" dy="2" />
+                <feBlend in="SourceGraphic" in2="the-shadow" mode="normal" />
+            </filter>
+
+            <linearGradient id="rect-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: rgb(254,254,255); stop-opacity:1" />
+                <stop offset="100%" style="stop-color: rgb(247,247,255); stop-opacity:1" />
+            </linearGradient>
+
+            <linearGradient id="rect-select-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #d9edf7; stop-opacity:1" />
+                <stop offset="100%" style="stop-color: #c9ddf7; stop-opacity:1" />
+            </linearGradient>
+
+            <linearGradient id="rect-highlight-gradient" x1="0%" y1="0%" x2="0%" y2="100%">
+                <stop offset="0%" style="stop-color: #77ee77; stop-opacity:1" />
+                <stop offset="100%" style="stop-color: #67de67; stop-opacity:1" />
+            </linearGradient>
+        </defs>
+
+        <g id="eventRect">
+            <rect width="100%" height="100%" style="fill: white" />
+            <g id="edges" />
+            <g id="nodes" />
+            <g id="tools" />
+            <g id="feedback" />
+        </g>
+    </svg>
+</div>
